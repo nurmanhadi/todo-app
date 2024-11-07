@@ -18,7 +18,7 @@ export class MailHelper {
         })
     }
     async EmailVerification(email: string, token: string): Promise<void>{
-        const urlResetPassword = `http://localhost:3000/api/auth/reset-password?token=${token}`
+        const urlResetPassword = `http://localhost:5173/auth/reset-password?token=${token}`
         const mailOptions = {
             from: MailtrapEmail.secret,
             to: email,
